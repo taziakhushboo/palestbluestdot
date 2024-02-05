@@ -2,7 +2,7 @@
 
 Install R, RStudio on your computer and run the following lines of code at the RStudio console to get the interactive visualization up and running:
 
-#Set up an input directory and download and save the data folder in this repository there. Then, run the following at the console:
+#Set up an input directory and download and save the data folder and the app.R file from this repository there. Then, run the following at the console:
 input_dir <- "/YOUR DIRECTORY HERE/data/"\
 setwd(input_dir)
 
@@ -23,6 +23,4 @@ library(shiny)\
 library(plotly)\
 library(ggplot2)
 
-#Download the app.R file and run the script!
-runGitHub(repo = "palestbluestdot", username = "taziakhushboo", ref = "main")
-
+#Run the app.R script to see the interactive visualization
