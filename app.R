@@ -1,27 +1,4 @@
 #How we created our visualization for the Pale Blue Dot competition:
-# Install packages:
-install.packages(c("ncdf4", "raster", "terra", "sf", "sp", "ggplot2", "leaflet", "dplyr", "geodata", "enmSdmX", "tidyverse", "htmlwidgets", "shiny"))
-
-# Load the necessary R packages:
-library(sp)
-library(ncdf4)
-library(raster)
-library(dplyr)
-library(geodata)
-library(enmSdmX)
-library(tidyverse)
-library(leaflet)
-
-library(shiny)
-library(plotly)
-library(ggplot2)
-
-# Set directories. The data has been downloaded manually from AppEEARS and saved in the following directory:
-input_dir <- "/Users/tazia.khushboo/Dropbox/Pale Blue Dot/data/"
-setwd(input_dir)  
-output_dir <- paste("/Users/tazia.khushboo/Dropbox/Pale Blue Dot/", 'output/', sep= '')
-suppressWarnings(dir.create(output_dir))
-
 # Get international boundary identifying the country of interest (Bangladesh here):
 crs <- CRS("+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs+ towgs84=0,0,0")
 bgd <- gadm(country="BGD", level=0, path=tempdir())
@@ -57,7 +34,7 @@ lct_mosaic <- lct_df %>% filter(c %in% lct_mosaic)
 lct_built <- lct_df %>% filter(c %in% lct_built)
 
 # Identify the correct file and produce empty vectors for the gross primary productivity and total evapotranspiration data by land cover type masks:
-file_list_GPP <- list.files(pattern = '*Gpp')
+file_list_GPP <- list.files(pattern = '*Gpp_500')
 len <- length(file_list_GPP)
 GPP_raster <- vector(mode = "list", length = len)
 GPP_df <- vector(mode = "list", length = len)
