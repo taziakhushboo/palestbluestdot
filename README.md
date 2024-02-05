@@ -5,5 +5,5 @@ Install RStudio on your computer and run the following lines of code to get the 
 
 install.packages("shiny")\
 library("shiny")\
-runGitHub(repo = "palestbluestdot", username = "taziakhushboo", ref = "main")\
+runGitHub(repo = "palestbluestdot", username = "taziakhushboo", ref = "main")
 
