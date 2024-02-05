@@ -1,11 +1,12 @@
 # Spatiotemporal Water Use Efficiency Metric for Bangladesh (2023) - Entry for the Pale Blue Dot: Visualization Challenge
 
-Install R, RStudio on your computer and run the following lines of code at the RStudio console to get the interactive visualization up and running:
+Install R, RStudio on your computer and get the interactive visualization up and running:
 
 #Set up an input directory and download and save the data folder and the app.R file from this repository there. Then, run the following at the console:
 input_dir <- "/YOUR DIRECTORY HERE/data/"\
 setwd(input_dir)
 
+#Open RStudio. At the console, type the following lines of code:
 #Install packages:
 install.packages(c("ncdf4", "raster", "terra", "sf", "sp", "ggplot2", "leaflet", "dplyr", "geodata", "enmSdmX", "tidyverse", "htmlwidgets", "shiny"))
 
@@ -23,4 +24,4 @@ library(shiny)\
 library(plotly)\
 library(ggplot2)
 
-#Run the app.R script to see the interactive visualization
+#Open the app.R script and run it to see the interactive visualization
