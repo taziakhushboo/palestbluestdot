@@ -23,6 +23,6 @@ library(shiny)\
 library(plotly)\
 library(ggplot2)
 
-#Run the App!
+#Download the app.R file and run the script!
 runGitHub(repo = "palestbluestdot", username = "taziakhushboo", ref = "main")
 
